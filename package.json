@@ -15,5 +15,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbush89/tdd-lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nbush89/tdd-lab/issues"
+  },
+  "homepage": "https://github.com/nbush89/tdd-lab#readme"
 }
