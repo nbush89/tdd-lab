@@ -8,7 +8,6 @@ class ChangeHandler {
     this.amountDue = amountDue;
     this.cashTendered = 0;
   }
-
   /**
    * The customer inserts a coin, increasing the cashTendered.
    * The parameter "type" is a string that is either quarter, dime, nickel, or penny
@@ -58,23 +57,23 @@ class ChangeHandler {
     }
     return coins;
 
-    // let changeDue = { quarters: 0, dimes: 0, nickels: 0, pennies: 0 };
-    // while (this.cashTendered > this.amountDue) {
-    //   if (this.cashTendered - this.amountDue >= 25) {
-    //     this.cashTendered -= 25;
-    //     changeDue.quarters++;
-    //   } else if (this.cashTendered - this.amountDue >= 10) {
-    //     this.cashTendered -= 10;
-    //     changeDue.dimes++;
-    //   } else if (this.cashTendered - this.amountDue >= 5) {
-    //     this.cashTendered -= 5;
-    //     changeDue.dimes++;
-    //   } else {
-    //     this.cashTendered -= 1;
-    //     changeDue.pennies++;
-    //   }
-    // }
-    // return changeDue;
+    let changeDue = { quarters: 0, dimes: 0, nickels: 0, pennies: 0 };
+    while (this.cashTendered > this.amountDue) {
+      if (this.cashTendered - this.amountDue >= 25) {
+        this.cashTendered -= 25;
+        changeDue.quarters++;
+      } else if (this.cashTendered - this.amountDue >= 10) {
+        this.cashTendered -= 10;
+        changeDue.dimes++;
+      } else if (this.cashTendered - this.amountDue >= 5) {
+        this.cashTendered -= 5;
+        changeDue.dimes++;
+      } else {
+        this.cashTendered -= 1;
+        changeDue.pennies++;
+      }
+    }
+    return changeDue;
   }
 }
 
